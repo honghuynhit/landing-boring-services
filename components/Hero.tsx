@@ -75,8 +75,7 @@ const Hero = () => {
             textAlign: "center",
           }}
         >
-          Polywrap is a new way to build endlessly extensible software that runs
-          anywhere.
+          Polywrap is a framework for building cross-platform web3 SDKs.
         </Typography>
         <Button
           color="primary"

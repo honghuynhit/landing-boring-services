@@ -11,14 +11,14 @@ export const benefits: BenefitCardProps[] = [
     color: "magenta",
     title: "Multi-Platform",
     description:
-      "Wrappers are universal, use them in any app, written in any language.",
+      "Write one SDK that can port your web3 logic to any execution environment.",
   },
   {
     slug: "user-friendly",
     color: "cyan",
     title: "User-Friendly",
     description:
-      "Integrating complex SDKs is finally as easy as interacting with web APIs.",
+      "Integrating web3 is finally as easy as interacting with web APIs.",
   },
   {
     slug: "secure",
