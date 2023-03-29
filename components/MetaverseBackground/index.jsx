@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { alpha, Box } from "@mui/material";
 import { Canvas, extend } from "@react-three/fiber";
-import { Effects } from "@react-three/drei";
+import { Effects, OrbitControls } from "@react-three/drei";
 import ParticleLandscape from "./ParticleLandscape";
 import ParticleRising from "./ParticleRising";
-import CameraRig from "./CameraRig";
 import { UnrealBloomPass } from "three-stdlib";
 import { useControls } from "leva";
 import { colors } from "../../styles/theme";
@@ -64,11 +63,27 @@ const MetaverseBackground = ({ fade, opacity }) => {
         },
       }}
     >
-      <Canvas camera={{ fov: 50 }}>
+      <Canvas
+        camera={{
+          position: [1.771423577047188, 1.2, -3.4364543723730123],
+          fov: 50,
+        }}
+      >
         <ParticleLandscape />
         <ParticleRising />
 
-        <CameraRig />
+        <OrbitControls
+          target={[0, 1.3, 0]}
+          enablePanning={false}
+          enableZoom={false}
+          enableRotate={false}
+          // allow some degree of rotation if the blobs are able
+          // to be rendered with three.js instead of absolute positioned pngs
+          // minPolarAngle={Math.PI * 0.45}
+          // maxPolarAngle={Math.PI * 0.55}
+          // minAzimuthAngle={Math.PI * 0.95}
+          // maxAzimuthAngle={Math.PI * 1.05}
+        />
 
         <Effects disableGamma>
           <unrealBloomPass threshold={1} strength={intensity} radius={radius} />
