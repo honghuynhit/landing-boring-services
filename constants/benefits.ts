@@ -7,9 +7,9 @@ export interface BenefitCardProps {
 
 export const benefits: BenefitCardProps[] = [
   {
-    slug: "multi-platform",
+    slug: "portable",
     color: "magenta",
-    title: "Multi-Platform",
+    title: "Portable",
     description:
       "Write one SDK that can port your web3 logic to any execution environment.",
   },
