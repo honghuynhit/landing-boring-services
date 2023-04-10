@@ -67,7 +67,9 @@ const CTASection = () => {
               >
                 <Button
                   color="primary"
-                  href="https://docs.polywrap.io/quick-start/the-polywrap-client"
+                  href="https://docs.polywrap.io/"
+                  target="_blank"
+                  rel="noredirect"
                   onClick={() => {
                     ReactGA.event({
                       category: "CTA",
