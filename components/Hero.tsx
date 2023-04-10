@@ -80,7 +80,9 @@ const Hero = () => {
         <Button
           color="primary"
           size="large"
-          href="https://docs.polywrap.io/quick-start/integrate-wrappers/install-client"
+          href="https://docs.polywrap.io/"
+          target="_blank"
+          rel="noredirect"
           onClick={() => {
             ReactGA.event({
               category: "CTA",
