@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { composable, modules } from "material-composer-r3f";
 import { upTo, between } from "randomish";
 import { OneMinus } from "shader-composer";
-import { Vector2, Vector3, Color, DoubleSide, MathUtils } from "three";
+import { Vector2, Vector3, Color, SingleSide, MathUtils } from "three";
 import {
   Emitter,
   InstancedParticles,
@@ -44,7 +44,7 @@ const ParticleRising = () => {
       <circleGeometry args={[0.005, 16]} />
       <composable.meshBasicMaterial
         transparent
-        side={DoubleSide}
+        side={SingleSide}
         toneMapped={false}
         depthWrite={false}
         color={new Color("#A114C3").multiplyScalar(10)}

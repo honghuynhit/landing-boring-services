@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { alpha, Box } from "@mui/material";
 import { Canvas, extend } from "@react-three/fiber";
 import { Effects, OrbitControls } from "@react-three/drei";
-import ParticleLandscape from "./ParticleLandscape";
 import ParticleRising from "./ParticleRising";
 import { UnrealBloomPass } from "three-stdlib";
 import { useControls } from "leva";
@@ -69,7 +68,6 @@ const MetaverseBackground = ({ fade, opacity }) => {
           fov: 50,
         }}
       >
-        <ParticleLandscape />
         <ParticleRising />
 
         <OrbitControls
