@@ -57,8 +57,7 @@ const MetaverseBackground = ({ fade, opacity }) => {
           left: 0,
           right: 0,
           content: fade ? `""` : null,
-          background: fade ? fades[fade] : null,
-          pointerEvents: "none",
+          background: fade ? fades[fade] : null
         },
       }}
     >
@@ -66,6 +65,10 @@ const MetaverseBackground = ({ fade, opacity }) => {
         camera={{
           position: [1.771423577047188, 1.2, -3.4364543723730123],
           fov: 50,
+        }}
+        style={{
+          pointerEvents: "none",
+          touchAction: "none",
         }}
       >
         <ParticleRising />
