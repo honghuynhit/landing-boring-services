@@ -3,46 +3,14 @@ import { Box, Stack } from "@mui/material";
 import { animations, colors } from "../../styles/theme";
 import Dot from "./Dot";
 import Frame from "./Frame";
-import { frames, FrameProps, LangProps } from "../../constants/IDE";
+import { frame, LangProps } from "../../constants/IDE";
 import PolywrapBlobYellow from "../../public/images/hero/blobs/7.webp";
 import PolywrapBlobMagenta from "../../public/images/hero/blobs/10.webp";
 import Image from "next/image";
-import { ArrowBack, ArrowForward } from "@mui/icons-material";
 
 const IDE = () => {
-  const [activeFrame, setActive] = useState<number>(0);
-  const [timerRunning, setTimerState] = useState<boolean>(false);
 
-  const [incrementFrame, setIncrementFrame] = useState<NodeJS.Timer>();
-
-  useEffect(() => {
-    setTimerState(true);
-  }, []);
-
-  useEffect(() => {
-    let inc = 0;
-    if (timerRunning) {
-      let incrementFrame = setInterval(() => {
-        setActive(inc % frames.length);
-        inc++;
-      }, 4000);
-      setIncrementFrame(incrementFrame);
-    }
-    return () => {
-      clearInterval(incrementFrame);
-      setTimerState(false);
-    };
-  }, [timerRunning]);
-
-  const nextFrame = activeFrame === frames.length - 1 ? 0 : activeFrame + 1;
-  const prevFrame = activeFrame === 0 ? frames.length - 1 : activeFrame - 1;
-
-  const allLangs: LangProps[] = [];
-  frames.map((frame) => {
-    frame.langs.map((lang) => {
-      allLangs.push(lang);
-    });
-  });
+  const allLangs: LangProps[] = frame.langs;
   const maxLinesClient = 2 + allLangs.reduce((acc, value) => {
     const codeLength: number = value.code.client
       .split("\n")
@@ -60,10 +28,6 @@ const IDE = () => {
     <Stack
       spacing={3}
       sx={{ position: "relative" }}
-      onClick={() => {
-        clearInterval(incrementFrame);
-        setTimerState(false);
-      }}
     >
       <Box
         component="div"
@@ -121,77 +85,15 @@ const IDE = () => {
           },
         }}
       >
-        {frames.map((_frame, i) => {
-          return (
-            <Frame
-              key={i}
-              {...frames[activeFrame]}
-              maxLines={{
-                client: maxLinesClient,
-                codegen: maxLinesCodegen
-              }}
-              active={i === activeFrame}
-              timerRunning={timerRunning}
-            />
-          );
-        })}
+        <Frame
+          slug={frame.slug}
+          langs={frame.langs}
+          maxLines={{
+            client: maxLinesClient,
+            codegen: maxLinesCodegen
+          }}
+        />
       </Box>
-      <Stack
-        direction="row"
-        sx={{ alignItems: "center", justifyContent: "space-evenly", zIndex: 1 }}
-      >
-        <Stack
-          onClick={() => setActive(prevFrame)}
-          sx={{
-            alignItems: "center",
-            justifyContent: "center",
-            cursor: "pointer",
-            bgcolor: colors.iris[900],
-            border: `1px solid ${colors.iris[600]}`,
-            p: 1,
-            borderRadius: 999,
-            transition: "all 0.25s ease-in-out",
-            "&:hover": {
-              bgcolor: colors.iris[800],
-              transform: "scale(1.1)",
-            },
-          }}
-        >
-          <ArrowBack />
-        </Stack>
-        <Stack
-          direction="row"
-          sx={{ alignItems: "center", justifyContent: "center" }}
-        >
-          {frames.map((_frame: FrameProps, i: number) => (
-            <Dot
-              key={i}
-              instance={i}
-              active={i === activeFrame}
-              setActive={setActive}
-            />
-          ))}
-        </Stack>
-        <Stack
-          onClick={() => setActive(nextFrame)}
-          sx={{
-            alignItems: "center",
-            justifyContent: "center",
-            cursor: "pointer",
-            bgcolor: colors.iris[900],
-            border: `1px solid ${colors.iris[600]}`,
-            p: 1,
-            borderRadius: 999,
-            transition: "all 0.25s ease-in-out",
-            "&:hover": {
-              bgcolor: colors.iris[800],
-              transform: "scale(1.1)",
-            },
-          }}
-        >
-          <ArrowForward />
-        </Stack>
-      </Stack>
     </Stack>
   );
 };

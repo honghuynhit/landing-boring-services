@@ -16,7 +16,6 @@ import Highlight, { defaultProps, Language } from "prism-react-renderer";
 import PrismTheme from "./PrismTheme";
 
 interface IDEFrameProps extends FrameProps {
-  active: boolean;
   timerRunning?: boolean;
   maxLines: {
     client: number;
@@ -26,10 +25,7 @@ interface IDEFrameProps extends FrameProps {
 
 const Frame = ({
   slug,
-  icon,
-  title,
   langs,
-  active,
   maxLines,
 }: IDEFrameProps) => {
   const [codeStyle, setCodeStyle] = useState<boolean>(true);
@@ -48,7 +44,7 @@ const Frame = ({
   const lineHeight: number = parseInt(theme.spacing(3));
 
   return (
-    <Box component="div" sx={{ display: active ? "block" : "none" }}>
+    <Box component="div" sx={{ display: "block" }}>
       <Stack
         spacing={2}
         sx={{
@@ -60,14 +56,11 @@ const Frame = ({
             "0%": { opacity: 1 },
             "100%": { opacity: 0 },
           },
-          animation: active
-            ? "fadeIn 0.5s 0.02s forwards ease-in"
-            : "fadeOut 0.5s forwards ease-in",
+          animation: "fadeIn 0.5s 0.02s forwards ease-in",
           opacity: 0,
           p: 3,
         }}
       >
-        <Typography fontWeight={600}>{title(activeLanguageName)}</Typography>
         <Stack>
           <Stack direction="row" justifyContent={"space-around"}>
             <Stack direction="row" width="100%">
@@ -243,17 +236,6 @@ const Frame = ({
                 );
               }}
             </Highlight>
-            <Stack
-              sx={{
-                display: ["none", "flex"],
-                position: "absolute",
-                bottom: theme.spacing(1.5),
-                right: theme.spacing(1.5),
-                opacity: 0.8,
-              }}
-            >
-              <Image className="lang-icon" src={icon} alt={slug} height="24" />
-            </Stack>
           </Box>
         </Stack>
       </Stack>

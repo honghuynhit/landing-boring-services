@@ -50,8 +50,8 @@ const ProblemSection = () => {
         <Stack spacing={6} sx={{ alignItems: "center", position: "relative" }}>
           <Stack spacing={4} sx={{ alignItems: "center" }}>
             <SectionTitle
-              top="Break Down"
-              bottom="Software Silos"
+              top="Build More"
+              bottom="Faster"
               letterSpacing="tight"
               alignment="center"
             />
@@ -64,9 +64,7 @@ const ProblemSection = () => {
                 textAlign: "center",
               }}
             >
-              Instead of building a patchwork of SDKs in different languages,
-              just build one wrapper that developers can easily integrate
-              anywhere.
+              <b>Polywrap helps developers</b>: reduce code duplication,<br/>eliminate rebuilds, and create extensible software.
             </Typography>
           </Stack>
           <Box
@@ -134,7 +132,7 @@ const ProblemSection = () => {
           >
             <Image
               src={PolywrapWrapper}
-              alt="polywrap wrapper illustration"
+              alt="polywrap wrap illustration"
               style={{ width: 260, height: "auto" }}
             />
           </Box>

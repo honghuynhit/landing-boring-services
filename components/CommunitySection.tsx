@@ -23,7 +23,7 @@ const CommunitySection = () => {
     >
       <Container sx={{ position: "relative" }}>
         <SectionTitle
-          top="The Wrapper"
+          top="The Wrap"
           bottom="Ecosystem"
           alignment="center"
           letterSpacing="tight"
@@ -66,7 +66,7 @@ const CommunitySection = () => {
           >
             <Image
               src={LeadingTheChargeImage}
-              alt="The Wrapper Ecosystem background imagery"
+              alt="The Wrap Ecosystem background imagery"
               placeholder="blur"
               style={{ width: "100%", height: "auto" }}
             />
