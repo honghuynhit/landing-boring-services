@@ -11,20 +11,20 @@ export const benefits: BenefitCardProps[] = [
     color: "magenta",
     title: "Portable",
     description:
-      "Write one SDK that can port your web3 logic to any execution environment.",
+      "Write one SDK that can port to any execution environment.",
   },
   {
-    slug: "user-friendly",
+    slug: "on-demand",
     color: "cyan",
-    title: "User-Friendly",
+    title: "On-Demand",
     description:
-      "Integrating web3 is finally as easy as interacting with web APIs.",
+      "Wraps can be fetched at run-time, unlocking new use-cases.",
   },
   {
     slug: "secure",
     color: "green",
     title: "Secure",
     description:
-      "Sandboxing keeps users safe by isolating wrappers from application memory.",
+      "Sandboxing keeps users safe, isolating wraps from app secrets.",
   },
 ];

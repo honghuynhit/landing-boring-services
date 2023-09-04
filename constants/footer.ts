@@ -27,10 +27,6 @@ export const footerLinks = [
         name: "Blog",
         url: "https://blog.polywrap.io/",
       },
-      {
-        name: "Eyes",
-        url: "https://eyes.polywrap.io/",
-      },
     ],
   },
   {

@@ -104,8 +104,8 @@ const InterfaceSection = () => {
               sx={{ alignItems: isDesktop ? "start" : "center" }}
             >
               <SectionTitle
-                top="A Universal"
-                bottom="Interface"
+                top="One Wrap"
+                bottom="Any App"
                 // size="small"
                 letterSpacing="tight"
                 alignment={isDesktop ? "start" : "center"}
@@ -119,18 +119,9 @@ const InterfaceSection = () => {
                   textAlign: isDesktop ? "left" : "center",
                 }}
               >
-                Wrappers let you compose web3 like never before. Simply
-                include the Polywrap client in your app to seamlessly read and
-                write to a variety of protocols from a secure WebAssembly VM.
-              </Typography>
-              <Typography
-                sx={{
-                  color: alpha(colors.white, 0.5),
-                  fontSize: 12,
-                  lineHeight: 1,
-                }}
-              >
-                {"Examples are for illustrative purposes only."}
+                Wraps let you run your code anywhere. Any app equipped with
+                a Polywrap client can run any wrap, all within
+                a secure WebAssembly VM.
               </Typography>
             </Stack>
           </Grid>

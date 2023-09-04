@@ -21,8 +21,8 @@ const BenefitsSection = () => {
     >
       <Container>
         <SectionTitle
-          top="WRAPPERS ARE"
-          bottom="WEB3-NATIVE SDKs"
+          top="WRAPS ARE"
+          bottom="BETTER SDKs"
           alignment="center"
           letterSpacing="tight"
           uppercase={false}
