@@ -64,9 +64,7 @@ const ProblemSection = () => {
                 textAlign: "center",
               }}
             >
-              Polywrap solves the most pressing issues that hinder software
-              developers from building solutions that scale. Polywrap helps reduce:
-              code duplication, arduous rebuild steps, and bespoke dependency injection solutions.
+              <b>Polywrap helps developers</b>: reduce code duplication,<br/>eliminate rebuilds, and create extensible software.
             </Typography>
           </Stack>
           <Box
