@@ -16,8 +16,6 @@ import IDE from "../public/images/IDE.png";
 import Blob1 from "../public/images/blobs/1.png";
 import Blob2 from "../public/images/blobs/2.png";
 import Blob3 from "../public/images/blobs/3.png";
-import shadows from "@mui/material/styles/shadows";
-import MetaverseBackground from "./MetaverseBackground";
 import ReactGA from "react-ga";
 
 const CTASection = () => {
@@ -36,7 +34,6 @@ const CTASection = () => {
         zIndex: 1,
       }}
     >
-      <MetaverseBackground fade="top" opacity={0.7} />
       <Container>
         <Box component="div" sx={{ position: "relative" }}>
           <Box
