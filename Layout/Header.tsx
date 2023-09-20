@@ -1,14 +1,40 @@
-import React from "react";
-import { Box, Container, Stack } from "@mui/material";
-import Image from "next/image";
+import React, { useState } from "react";
+import { Box, Grid, Container, Dialog } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
+import MenuIcon from "@mui/icons-material/Menu";
+import { styled } from "@mui/styles";
 import Link from "next/link";
-import Navlink from "../components/Navlink";
 import Logo from "../components/Logo";
-import Logomark from "../public/images/Logomark.png";
+import ImportantLinks from "../components/ImportantLinks";
+import { colors } from "../styles/theme";
 import useIsDesktop from "../hooks/useIsDesktop";
 
+const CloseButton = styled(CloseIcon)({
+  color: colors.white,
+  width: 32,
+  height: 32,
+  cursor: "pointer",
+});
+
+const LeftPadding = styled("div")({
+  width: 32,
+  height: 32
+});
+
+const MenuButton = styled(MenuIcon)({
+  color: colors.white,
+  width: 32,
+  height: 32,
+  cursor: "pointer",
+});
+
 const Header = () => {
+  const [open, setOpen] = useState<boolean>(false);
   const isDesktop = useIsDesktop();
+
+  const handleClose = () => setOpen(false);
+  const handleOpen = () => setOpen(true);
+
   return (
     <Box
       component="header"
@@ -30,36 +56,40 @@ const Header = () => {
               <Logo animateBorderWidth height={20} marginTop={12} />
             )}
           </Link>
-          <Stack
-            spacing={[1.5, 3, 5, 6]}
-            direction="row"
+          <MenuButton onClick={handleOpen} />
+          <Dialog
+            fullScreen
+            open={open}
+            onClose={handleClose}
             sx={{
-              alignItems: "center",
-              justifyContent: "center",
+              "& .MuiPaper-root": { background: "transparent" },
+              background: colors.black,
             }}
           >
-            <Navlink
-              target="_blank"
-              rel="noredirect"
-              href="https://docs.polywrap.io/"
+            <Grid
+              container
+              flexDirection="row-reverse"
+              justifyContent="center"
+              sx={{
+                flexGrow: 1,
+                boxSizing: "border-box",
+                height: "100%",
+                width: "100%",
+                minHeight: "100%",
+                px: 2,
+                pt: isDesktop ? 8 : 2,
+                pb: 5,
+              }}
             >
-              docs
-            </Navlink>
-            <Navlink
-              target="_blank"
-              rel="noredirect"
-              href="https://github.com/polywrap/"
-            >
-              github
-            </Navlink>
-            <Navlink
-              target="_blank"
-              rel="noredirect"
-              href="https://discord.com/invite/Z5m88a5qWu"
-            >
-              discord
-            </Navlink>
-          </Stack>
+              <Box component="div" sx={{ pt: isDesktop ? 10 : 2 }}>
+                <CloseButton onClick={handleClose} />
+              </Box>
+              <Box component="div" sx={{ px: 10 }}>
+                <ImportantLinks noLogo={!isDesktop} />
+              </Box>
+              <LeftPadding />
+            </Grid>
+          </Dialog>
         </Box>
       </Container>
     </Box>

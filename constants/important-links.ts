@@ -1,10 +1,14 @@
-export const footerLinks = [
+export const importantLinks = [
   {
-    name: "Code",
+    name: "Build",
     links: [
       {
         name: "Docs",
         url: "https://docs.polywrap.io/",
+      },
+      {
+        name: "Wrapscan",
+        url: "https://wrapscan.io/",
       },
       {
         name: "Github",

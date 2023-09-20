@@ -11,7 +11,7 @@ export const benefits: BenefitCardProps[] = [
     color: "magenta",
     title: "Portable",
     description:
-      "Write one SDK that can port to any execution environment.",
+      "Write one SDK that can run within any language or platform.",
   },
   {
     slug: "on-demand",
