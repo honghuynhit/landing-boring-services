@@ -2,7 +2,6 @@ import React from "react";
 import { alpha, Box, Button, Container, Typography } from "@mui/material";
 import { animations, colors, typography } from "../styles/theme";
 import Blobs from "./Blobs";
-import MetaverseBackground from "./MetaverseBackground";
 import ReactGA from "react-ga";
 
 const Hero = () => {
@@ -20,7 +19,6 @@ const Hero = () => {
         zIndex: 1,
       }}
     >
-      <MetaverseBackground fade="bottom" opacity={0.4} />
       <Blobs section="hero" />
       <Container
         sx={{
