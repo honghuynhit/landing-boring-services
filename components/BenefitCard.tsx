@@ -1,3 +1,4 @@
+import ReactDOM from 'react-dom';
 import { Link, Box, Stack, Typography } from "@mui/material";
 import shadows from "@mui/material/styles/shadows";
 import Image, { StaticImageData } from "next/image";
@@ -19,7 +20,14 @@ const blobs: BlobProps = {
   green: GreenBlob,
 };
 
+const rgbs: Record<BenefitCardProps["color"], string> = {
+  magenta: "255,0,255",
+  cyan: "0,255,255",
+  green: "0,255,0"
+}
+
 const BenefitCard = ({ slug, color, title, description }: BenefitCardProps) => {
+  console.log(`rgba(${rgbs[color]},1)`);
   return (
     <Link href={slug}>
       <Box
@@ -89,7 +97,7 @@ const BenefitCard = ({ slug, color, title, description }: BenefitCardProps) => {
           sx={{
             position: "absolute",
             background: colors[color],
-            boxShadow: shadows[24],
+            boxShadow: `0px 11px 15px -7px rgba(${rgbs[color]},0.2),0px 24px 38px 3px rgba(${rgbs[color]},0.14),0px 9px 46px 8px rgba(${rgbs[color]}, 0.12)`,
             borderRadius: 4,
             top: 6,
             bottom: 6,

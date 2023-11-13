@@ -50,8 +50,8 @@ const ProblemSection = () => {
         <Stack spacing={6} sx={{ alignItems: "center", position: "relative" }}>
           <Stack spacing={4} sx={{ alignItems: "center" }}>
             <SectionTitle
-              top="Bring AI"
-              bottom="On-Chain"
+              top="Our"
+              bottom="Mission"
               letterSpacing="tight"
               alignment="center"
             />
@@ -64,9 +64,8 @@ const ProblemSection = () => {
                 textAlign: "center",
               }}
             >
-              We are a <b>globally-distributed community</b> building a suite of
-              tools that empower people to benefit from the new economic
-              opportunities of frontier technologies.
+              We are a <b>global community</b> leveraging AI to
+              make<br/>Web3 more accessible to everyone.
             </Typography>
           </Stack>
           <Box

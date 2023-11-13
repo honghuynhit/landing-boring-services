@@ -34,11 +34,11 @@ const ImportantLinks = (props: ImportantLinksProps) => {
             </Grid>
           }
           <Grid item xs={12} lg={8}>
-            <Grid container spacing={6}>
+            <Grid container spacing={4}>
               {importantLinks.map((category, i) => {
                 return (
-                  <Grid key={i} item xs={12} md={4}>
-                    <Stack spacing={3}>
+                  <Grid key={i} item xs={12} md={6}>
+                    <Stack spacing={2}>
                       <Box component="div">
                         <Typography
                           component="h2"

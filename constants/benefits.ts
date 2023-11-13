@@ -30,22 +30,22 @@ export const benefits: BenefitCardProps[] = [
   {
     slug: "https://evo.ninja/",
     color: "magenta",
-    title: "Evo.ninja",
+    title: "evo.ninja",
     description:
-      "Evo.ninja is a multi-agent app capable of writing code, researching the web, and analyzing data.",
+      "a versatile and high-performing generalist agent.",
   },
   {
     slug: "https://www.unblock.gg/",
     color: "cyan",
     title: "Unblock",
     description:
-      "Unblock lets everyday users iInteract with all of web3 through an intuitive chat interface.",
+      "interact with web3 through an intuitive chat interface.",
   },
   {
     slug: "https://docs.polywrap.io/",
     color: "green",
-    title: "The Polywrap Framework",
+    title: "Wraps",
     description:
-      "The Polywrap Framework helps developers reduce code duplication, eliminate rebuilds, and create extensible software.",
+      "portable and composable software modules.",
   },
 ];

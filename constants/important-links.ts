@@ -1,18 +1,18 @@
 export const importantLinks = [
   {
-    name: "Build",
+    name: "Products",
     links: [
       {
-        name: "Docs",
+        name: "evo.ninja",
+        url: "https://evo.ninja",
+      },
+      {
+        name: "Unblock",
+        url: "https://unblock.gg/",
+      },
+      {
+        name: "Wraps",
         url: "https://docs.polywrap.io/",
-      },
-      {
-        name: "Wrapscan",
-        url: "https://wrapscan.io/",
-      },
-      {
-        name: "Github",
-        url: "https://github.com/polywrap",
       },
     ],
   },
@@ -30,23 +30,6 @@ export const importantLinks = [
       {
         name: "Blog",
         url: "https://blog.polywrap.io/",
-      },
-    ],
-  },
-  {
-    name: "Governance",
-    links: [
-      {
-        name: "Handbook",
-        url: "https://handbook.polywrap.io/",
-      },
-      {
-        name: "Forum",
-        url: "https://forum.polywrap.io/",
-      },
-      {
-        name: "Snapshot",
-        url: "https://snapshot.org/#/polywrap.eth",
       },
     ],
   },
