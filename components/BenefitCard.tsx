@@ -27,7 +27,6 @@ const rgbs: Record<BenefitCardProps["color"], string> = {
 }
 
 const BenefitCard = ({ slug, color, title, description }: BenefitCardProps) => {
-  console.log(`rgba(${rgbs[color]},1)`);
   return (
     <Link href={slug}>
       <Box
