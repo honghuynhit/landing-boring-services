@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Polywrap - Building the Composable Future</title>
+        <title>Polywrap - Simplifying Complexity</title>
       </Head>
       <main>
         <Hero />

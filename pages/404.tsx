@@ -52,7 +52,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>404 | Polywrap - Enter the Composable Future</title>
+        <title>404 | Polywrap - Simplifying Complexity</title>
       </Head>
       <main>
         <Four0Four />
