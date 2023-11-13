@@ -29,12 +29,7 @@ const MenuButton = styled(MenuIcon)({
 });
 
 const Header = () => {
-  const [open, setOpen] = useState<boolean>(false);
   const isDesktop = useIsDesktop();
-
-  const handleClose = () => setOpen(false);
-  const handleOpen = () => setOpen(true);
-
   return (
     <Box
       component="header"
@@ -56,40 +51,6 @@ const Header = () => {
               <Logo animateBorderWidth height={20} marginTop={12} />
             )}
           </Link>
-          <MenuButton onClick={handleOpen} />
-          <Dialog
-            fullScreen
-            open={open}
-            onClose={handleClose}
-            sx={{
-              "& .MuiPaper-root": { background: "transparent" },
-              background: colors.black,
-            }}
-          >
-            <Grid
-              container
-              flexDirection="row-reverse"
-              justifyContent="center"
-              sx={{
-                flexGrow: 1,
-                boxSizing: "border-box",
-                height: "100%",
-                width: "100%",
-                minHeight: "100%",
-                px: 2,
-                pt: isDesktop ? 8 : 2,
-                pb: 5,
-              }}
-            >
-              <Box component="div" sx={{ pt: isDesktop ? 10 : 2 }}>
-                <CloseButton onClick={handleClose} />
-              </Box>
-              <Box component="div" sx={{ px: 10 }}>
-                <ImportantLinks noLogo={!isDesktop} />
-              </Box>
-              <LeftPadding />
-            </Grid>
-          </Dialog>
         </Box>
       </Container>
     </Box>

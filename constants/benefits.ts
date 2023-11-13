@@ -6,25 +6,46 @@ export interface BenefitCardProps {
 }
 
 export const benefits: BenefitCardProps[] = [
+  // {
+  //   slug: "portable",
+  //   color: "magenta",
+  //   title: "Portable",
+  //   description:
+  //     "Write one SDK that can run within any language or platform.",
+  // },
+  // {
+  //   slug: "on-demand",
+  //   color: "cyan",
+  //   title: "On-Demand",
+  //   description:
+  //     "Wraps can be fetched at run-time, unlocking new use-cases.",
+  // },
+  // {
+  //   slug: "secure",
+  //   color: "green",
+  //   title: "Secure",
+  //   description:
+  //     "Sandboxing keeps users safe, isolating wraps from app secrets.",
+  // },
   {
-    slug: "portable",
+    slug: "https://evo.ninja/",
     color: "magenta",
-    title: "Portable",
+    title: "evo.ninja",
     description:
-      "Write one SDK that can run within any language or platform.",
+      "a versatile and high-performing generalist agent.",
   },
   {
-    slug: "on-demand",
+    slug: "https://www.unblock.gg/",
     color: "cyan",
-    title: "On-Demand",
+    title: "Unblock",
     description:
-      "Wraps can be fetched at run-time, unlocking new use-cases.",
+      "interact with web3 through an intuitive chat interface.",
   },
   {
-    slug: "secure",
+    slug: "https://docs.polywrap.io/",
     color: "green",
-    title: "Secure",
+    title: "Wraps",
     description:
-      "Sandboxing keeps users safe, isolating wraps from app secrets.",
+      "portable and composable software modules.",
   },
 ];

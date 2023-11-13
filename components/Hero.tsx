@@ -47,7 +47,7 @@ const Hero = () => {
               mb: 0.5,
             }}
           >
-            Enter The
+            Simplifying
           </Box>
           <Box
             component="div"
@@ -59,9 +59,7 @@ const Hero = () => {
               lineHeight: 0.9,
             }}
           >
-            Composable
-            <br />
-            Future
+            Complexity
           </Box>
         </Typography>
         <Typography
@@ -73,20 +71,21 @@ const Hero = () => {
             textAlign: "center",
           }}
         >
-          Polywrap is a framework for building <b>Wraps:</b><br/>
-          <i>Portable & Composable Modules</i>
+          Autonomous Agents and Web3 Technologies
+          <br />
+          <i>enabling human-centric applications.</i>
         </Typography>
         <Button
           color="primary"
           size="large"
-          href="https://docs.polywrap.io/"
+          href="https://discord.com/invite/Z5m88a5qWu"
           target="_blank"
           rel="noredirect"
           onClick={() => {
             ReactGA.event({
               category: "CTA",
-              action: `goto quick start`,
-              label: "Hero",
+              action: `discord signup`,
+              label: "CTA Section",
             });
           }}
           sx={{
@@ -96,7 +95,7 @@ const Hero = () => {
             mt: 4,
           }}
         >
-          Start Building
+          Join Discord
         </Button>
       </Container>
     </Box>

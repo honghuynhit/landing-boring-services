@@ -21,8 +21,8 @@ const BenefitsSection = () => {
     >
       <Container>
         <SectionTitle
-          top="WRAPS ARE"
-          bottom="BETTER SDKs"
+          top="Bridging Agents & Blockchains"
+          bottom=" "
           alignment="center"
           letterSpacing="tight"
           uppercase={false}

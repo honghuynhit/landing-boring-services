@@ -22,12 +22,6 @@ const CommunitySection = () => {
       }}
     >
       <Container sx={{ position: "relative" }}>
-        <SectionTitle
-          top="The Wrap"
-          bottom="Ecosystem"
-          alignment="center"
-          letterSpacing="tight"
-        />
         <Box
           component="div"
           sx={{
