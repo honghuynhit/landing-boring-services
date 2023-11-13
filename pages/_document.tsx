@@ -17,17 +17,17 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content="#5361F8"></meta>
           <meta
             name="description"
-            content="Polywrap is a WebAssembly standard for building endlessly extensible software that runs anywhere."
+            content="Polywrap is a global community leveraging AI to make Web3 more accessible to everyone."
           />
           <meta
             property="og:description"
-            content="Polywrap is a WebAssembly standard for building endlessly extensible software that runs anywhere."
+            content="Polywrap is a global community leveraging AI to make Web3 more accessible to everyone."
           />
 
           <link rel="manifest" href="/manifest.json" />
           <meta
             property="og:title"
-            content="Polywrap - Enter the Composable Future"
+            content="Polywrap - Simplifying Complexity"
           />
 
           <meta property="og:image" content="/polywrap-og.jpg" />

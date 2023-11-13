@@ -36,7 +36,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <ThemeProvider theme={theme}>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Polywrap - Enter the Composable Future</title>
+        <title>Polywrap - Simplifying Complexity</title>
       </Head>
       <CssBaseline />
       <Header />
