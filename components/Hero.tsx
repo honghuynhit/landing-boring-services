@@ -73,8 +73,9 @@ const Hero = () => {
             textAlign: "center",
           }}
         >
-          Polywrap is a framework for building <b>Wraps:</b><br/>
-          <i>Portable & Composable Modules</i>
+          Autonomous agents and web3 technologies that enable
+          <br />
+          <i>open, portable, and extensible applications.</i>
         </Typography>
         <Button
           color="primary"

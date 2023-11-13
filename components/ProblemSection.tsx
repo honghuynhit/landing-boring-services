@@ -50,8 +50,8 @@ const ProblemSection = () => {
         <Stack spacing={6} sx={{ alignItems: "center", position: "relative" }}>
           <Stack spacing={4} sx={{ alignItems: "center" }}>
             <SectionTitle
-              top="Build More"
-              bottom="Faster"
+              top="Bring AI"
+              bottom="On-Chain"
               letterSpacing="tight"
               alignment="center"
             />
@@ -64,7 +64,9 @@ const ProblemSection = () => {
                 textAlign: "center",
               }}
             >
-              <b>Polywrap helps developers</b>: reduce code duplication,<br/>eliminate rebuilds, and create extensible software.
+              We are a <b>globally-distributed community</b> building a suite of
+              tools that empower people to benefit from the new economic
+              opportunities of frontier technologies.
             </Typography>
           </Stack>
           <Box

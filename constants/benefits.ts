@@ -6,25 +6,46 @@ export interface BenefitCardProps {
 }
 
 export const benefits: BenefitCardProps[] = [
+  // {
+  //   slug: "portable",
+  //   color: "magenta",
+  //   title: "Portable",
+  //   description:
+  //     "Write one SDK that can run within any language or platform.",
+  // },
+  // {
+  //   slug: "on-demand",
+  //   color: "cyan",
+  //   title: "On-Demand",
+  //   description:
+  //     "Wraps can be fetched at run-time, unlocking new use-cases.",
+  // },
+  // {
+  //   slug: "secure",
+  //   color: "green",
+  //   title: "Secure",
+  //   description:
+  //     "Sandboxing keeps users safe, isolating wraps from app secrets.",
+  // },
   {
-    slug: "portable",
+    slug: "https://evo.ninja/",
     color: "magenta",
-    title: "Portable",
+    title: "Evo.ninja",
     description:
-      "Write one SDK that can run within any language or platform.",
+      "Evo.ninja is a multi-agent app capable of writing code, researching the web, and analyzing data.",
   },
   {
-    slug: "on-demand",
+    slug: "https://www.unblock.gg/",
     color: "cyan",
-    title: "On-Demand",
+    title: "Unblock",
     description:
-      "Wraps can be fetched at run-time, unlocking new use-cases.",
+      "Unblock lets everyday users iInteract with all of web3 through an intuitive chat interface.",
   },
   {
-    slug: "secure",
+    slug: "https://docs.polywrap.io/",
     color: "green",
-    title: "Secure",
+    title: "The Polywrap Framework",
     description:
-      "Sandboxing keeps users safe, isolating wraps from app secrets.",
+      "The Polywrap Framework helps developers reduce code duplication, eliminate rebuilds, and create extensible software.",
   },
 ];
