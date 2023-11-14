@@ -27,9 +27,9 @@ const MissionSection = () => {
         alignItems: "center",
         display: "flex",
         justifyContent: "center",
-        minHeight: "calc(var(--vh, 1vh) * 90)",
+        minHeight: "calc(var(--vh, 1vh) * 100)",
         width: "100%",
-        mb: [16, 16, 0],
+        mb: [16, 16, 16],
         position: "relative",
         zIndex: 1,
       }}
