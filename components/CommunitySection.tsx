@@ -49,10 +49,16 @@ const CommunitySection = () => {
               />
             );
           })}
+          <SectionTitle
+            top="The Polywrap"
+            bottom="Ecosystem"
+            alignment="center"
+            letterSpacing="tight"
+          />
           <Box
             component="div"
             sx={{
-              // aspectRatio: "1182/882",
+              aspectRatio: "1182/882",
               position: "relative",
               zIndex: 0,
               width: "100%",
@@ -62,7 +68,7 @@ const CommunitySection = () => {
               src={LeadingTheChargeImage}
               alt="The Wrap Ecosystem background imagery"
               placeholder="blur"
-              style={{ width: "100%", height: "auto" }}
+              style={{ marginTop: "5rem", width: "100%", height: "auto" }}
             />
           </Box>
           {protocols.map((protocol, i) => {
