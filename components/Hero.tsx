@@ -4,7 +4,7 @@ import { animations, colors, typography } from "../styles/theme";
 import Blobs from "./Blobs";
 import ReactGA from "react-ga";
 
-const Hero = () => {
+const Hero = (props: { scrollToProducts: () => void }) => {
   return (
     <Box
       component="section"
@@ -78,16 +78,7 @@ const Hero = () => {
         <Button
           color="primary"
           size="large"
-          href="https://discord.com/invite/Z5m88a5qWu"
-          target="_blank"
-          rel="noredirect"
-          onClick={() => {
-            ReactGA.event({
-              category: "CTA",
-              action: `discord signup`,
-              label: "CTA Section",
-            });
-          }}
+          onClick={props.scrollToProducts}
           sx={{
             ...animations.fadeUp,
             animation: `fadeUp 1s 1.25s forwards`,
@@ -95,7 +86,7 @@ const Hero = () => {
             mt: 4,
           }}
         >
-          Join Discord
+          Our Products
         </Button>
       </Container>
     </Box>
