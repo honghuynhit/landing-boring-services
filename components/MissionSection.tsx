@@ -3,7 +3,7 @@ import {
   alpha,
   Box,
   Container,
-  Grid,
+  Button,
   Stack,
   Typography,
   useMediaQuery,
@@ -14,8 +14,9 @@ import { animations, colors } from "../styles/theme";
 import PolywrapWrapper from "../public/images/polywrap-wrapper-1.png";
 import Waves from "../public/images/wave-lines-1.webp";
 import Image from "next/image";
+import ReactGA from "react-ga";
 
-const ProblemSection = () => {
+const MissionSection = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -26,7 +27,7 @@ const ProblemSection = () => {
         alignItems: "center",
         display: "flex",
         justifyContent: "center",
-        minHeight: "calc(var(--vh, 1vh) * 70)",
+        minHeight: "calc(var(--vh, 1vh) * 80)",
         width: "100%",
         mb: [16, 16, 0],
         position: "relative",
@@ -137,10 +138,35 @@ const ProblemSection = () => {
               style={{ width: 260, height: "auto" }}
             />
           </Box>
+          <Button
+            color="primary"
+            size="large"
+            href="https://discord.com/invite/Z5m88a5qWu"
+            target="_blank"
+            rel="noredirect"
+            onClick={() => {
+              ReactGA.event({
+                category: "CTA",
+                action: `discord signup`,
+                label: "CTA Section",
+              });
+            }}
+            sx={{
+              ...animations.fadeUp,
+              animation: `fadeUp 1s 1.25s forwards`,
+              opacity: 0,
+              mt: 4,
+            }}
+            style={{
+              marginTop: "10px"
+            }}
+          >
+            Join Discord
+          </Button>
         </Stack>
       </Container>
     </Box>
   );
 };
 
-export default ProblemSection;
+export default MissionSection;

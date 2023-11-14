@@ -1,10 +1,10 @@
 import React from "react";
-import { Box, Container, Grid, Stack, Typography } from "@mui/material";
+import { Box, Container, Grid } from "@mui/material";
 import SectionTitle from "./SectionTitle";
 import BenefitCard from "./BenefitCard";
 import { benefits, BenefitCardProps } from "../constants/benefits";
 
-const BenefitsSection = () => {
+const ProductsSection = () => {
   return (
     <Box
       component="section"
@@ -39,4 +39,4 @@ const BenefitsSection = () => {
   );
 };
 
-export default BenefitsSection;
+export default ProductsSection;

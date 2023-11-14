@@ -1,14 +1,15 @@
 import React from "react";
 import Hero from "../components/Hero";
-import ProblemSection from "../components/ProblemSection";
-import BenefitsSection from "../components/BenefitsSection";
+import MissionSection from "../components/MissionSection";
+import ProductsSection from "../components/ProductsSection";
 import CommunitySection from "../components/CommunitySection";
-import CTASection from "../components/CTASection";
 import Head from "next/head";
 import ReactGA from "react-ga";
 
 export default function Home() {
   ReactGA.pageview("home");
+
+  const productsComponent = React.useRef<HTMLDivElement>(null);
 
   return (
     <>
@@ -16,9 +17,15 @@ export default function Home() {
         <title>Polywrap - Simplifying Complexity</title>
       </Head>
       <main>
-        <Hero />
-        <ProblemSection />
-        <BenefitsSection />
+        <Hero scrollToProducts={() => {
+          if (productsComponent.current) {
+            productsComponent.current.scrollIntoView({ behavior: 'smooth' });
+          }
+        }} />
+        <div ref={productsComponent}>
+          <ProductsSection />
+        </div>
+        <MissionSection />
         <CommunitySection />
       </main>
     </>
