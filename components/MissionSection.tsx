@@ -27,9 +27,9 @@ const MissionSection = () => {
         alignItems: "center",
         display: "flex",
         justifyContent: "center",
-        minHeight: "calc(var(--vh, 1vh) * 80)",
+        minHeight: "calc(var(--vh, 1vh) * 100)",
         width: "100%",
-        mb: [16, 16, 0],
+        mb: [16, 16, 16],
         position: "relative",
         zIndex: 1,
       }}
@@ -65,8 +65,9 @@ const MissionSection = () => {
                 textAlign: "center",
               }}
             >
-              We are a <b>global community</b> leveraging AI to
-              make<br/>Web3 more accessible to everyone.
+              We are a <b>global community</b> leveraging AI to make
+              <br />
+              Web3 more accessible to everyone.
             </Typography>
           </Stack>
           <Box
@@ -158,7 +159,7 @@ const MissionSection = () => {
               mt: 4,
             }}
             style={{
-              marginTop: "10px"
+              marginTop: "25px",
             }}
           >
             Join Discord

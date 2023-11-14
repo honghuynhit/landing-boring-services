@@ -47,7 +47,7 @@ const Hero = (props: { scrollToProducts: () => void }) => {
               mb: 0.5,
             }}
           >
-            Simplifying
+            Unleashing
           </Box>
           <Box
             component="div"
@@ -59,7 +59,7 @@ const Hero = (props: { scrollToProducts: () => void }) => {
               lineHeight: 0.9,
             }}
           >
-            Complexity
+            Autonomous Intelligence
           </Box>
         </Typography>
         <Typography
@@ -71,7 +71,7 @@ const Hero = (props: { scrollToProducts: () => void }) => {
             textAlign: "center",
           }}
         >
-          Autonomous Agents and Web3 Technologies
+          AI Agents and Web3 Technologies
           <br />
           <i>enabling human-centric applications.</i>
         </Typography>

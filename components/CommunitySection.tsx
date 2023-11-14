@@ -15,12 +15,19 @@ const CommunitySection = () => {
       sx={{
         alignItems: "center",
         display: "flex",
+        flexDirection: "column",
         justifyContent: "center",
-        minHeight: "calc(var(--vh, 1vh) * 100)",
+        minHeight: "calc(var(--vh, 1vh) * 90)",
         mt: [8, 12, 0],
         width: "100%",
       }}
     >
+      <SectionTitle
+        top="The Polywrap"
+        bottom="Ecosystem"
+        alignment="center"
+        letterSpacing="tight"
+      />
       <Container sx={{ position: "relative" }}>
         <Box
           component="div"
@@ -52,7 +59,7 @@ const CommunitySection = () => {
           <Box
             component="div"
             sx={{
-              // aspectRatio: "1182/882",
+              aspectRatio: "1182/882",
               position: "relative",
               zIndex: 0,
               width: "100%",
@@ -62,7 +69,7 @@ const CommunitySection = () => {
               src={LeadingTheChargeImage}
               alt="The Wrap Ecosystem background imagery"
               placeholder="blur"
-              style={{ width: "100%", height: "auto" }}
+              style={{ marginTop: "5rem", width: "100%", height: "auto" }}
             />
           </Box>
           {protocols.map((protocol, i) => {
