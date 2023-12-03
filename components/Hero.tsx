@@ -71,9 +71,7 @@ const Hero = (props: { scrollToProducts: () => void }) => {
               lineHeight: 0.9,
             }}
           >
-            <i>for small companies</i> 
-            <br/>
-            on cloud
+            <i>for small companies</i>
           </Box>
           <Box
             component="div"
