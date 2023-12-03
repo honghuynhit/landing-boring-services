@@ -59,7 +59,11 @@ const Hero = (props: { scrollToProducts: () => void }) => {
               lineHeight: 0.9,
             }}
           >
-            Allow setup technology for small companies on cloud
+            Allow setup technology 
+            <br/>
+            for small companies 
+            <br/>
+            on cloud
           </Box>
         </Typography>
         <Typography
@@ -71,7 +75,7 @@ const Hero = (props: { scrollToProducts: () => void }) => {
             textAlign: "center",
           }}
         >
-          Free Resource -- Quick Build -- Quick Access -- Quick Support -- Low Cost
+          Open Source -- Quick Build -- Quick Access -- Quick Support -- Low Cost
         </Typography>
         <Button
           color="primary"
