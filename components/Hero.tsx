@@ -61,7 +61,7 @@ const Hero = (props: { scrollToProducts: () => void }) => {
           >
             Allow setup technology 
             <br/>
-            for small companies 
+            <i>for small companies</i> 
             <br/>
             on cloud
           </Box>
