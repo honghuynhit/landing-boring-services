@@ -59,7 +59,7 @@ const Hero = (props: { scrollToProducts: () => void }) => {
               lineHeight: 0.9,
             }}
           >
-            Autonomous Intelligence
+            Allow setup technology for small companies on cloud
           </Box>
         </Typography>
         <Typography
@@ -71,9 +71,7 @@ const Hero = (props: { scrollToProducts: () => void }) => {
             textAlign: "center",
           }}
         >
-          AI Agents and Web3 Technologies
-          <br />
-          <i>enabling human-centric applications.</i>
+          Free Resource -- Quick Build -- Quick Access -- Quick Support -- Low Cost
         </Typography>
         <Button
           color="primary"
