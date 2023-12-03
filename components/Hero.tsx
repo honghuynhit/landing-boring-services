@@ -55,14 +55,36 @@ const Hero = (props: { scrollToProducts: () => void }) => {
               textShadow: `0 4px 64px rgba(255,255,255,0.3)`,
               display: "block",
               fontWeight: 800,
+              ...typography.display.h3,
+              lineHeight: 0.9,
+            }}
+          >
+            Allow setup technology
+          </Box>
+          <Box
+            component="div"
+            sx={{
+              textShadow: `0 4px 64px rgba(255,255,255,0.3)`,
+              display: "block",
+              fontWeight: 800,
+              ...typography.display.h4,
+              lineHeight: 0.9,
+            }}
+          >
+            <i>for small companies</i> 
+            <br/>
+            on cloud
+          </Box>
+          <Box
+            component="div"
+            sx={{
+              textShadow: `0 4px 64px rgba(255,255,255,0.3)`,
+              display: "block",
+              fontWeight: 800,
               ...typography.display.h1,
               lineHeight: 0.9,
             }}
           >
-            Allow setup technology 
-            <br/>
-            <i>for small companies</i> 
-            <br/>
             on cloud
           </Box>
         </Typography>
