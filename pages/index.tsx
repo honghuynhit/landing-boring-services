@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Polywrap - Simplifying Complexity</title>
+        <title>Boring Services - Simplifying Complexity</title>
       </Head>
       <main>
         <Hero scrollToProducts={() => {
